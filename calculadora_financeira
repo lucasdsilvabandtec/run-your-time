@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculadora Financeira</title>
+</head>
+<body>
+    
+
+Deseja comprar quantos dados ? <input id="quant_dados"autofocus>
+<br><br>
+<button onclick="calcular()">Comprar</button>
+<br><br>
+
+Qual o tipo de dados ?<select id="modalidades">
+        <option id="fut" value="Com a compra de dados da modalidade futebol, obtivemos um lucro de">Futebol</option>
+        <option id="basq" value="Com a compra de dados da modalidade basquete, obtivemos um lucro de">Basquete</option>
+        <option id="corri" value="Com a compra de dados da modalidade corrida, obtivemos um lucro de">Corrida</option>
+        <option id="vole" value="Com a compra de dados da modalidade volei, obtivemos um lucro de">Volei</option>
+        <option id="alpi" value="Com a compra de dados da modalidade alpinista, obtivemos um lucro de">Alpinista</option>
+    </select>
+    <br><br>
+    <div id="div_mensagem"></div>
+    <br>
+</body>
+</html>
+
+<script>
+
+function calcular() {
+
+var q_dados = Number(quant_dados.value);
+
+var futebol1 = q_dados * 0.80 ;
+var basquete1 = q_dados* 0.60 ;
+var corrida1 = q_dados * 0.40 ;
+var volei1 = q_dados * 0.25 ; 
+var alpinista1 = q_dados * 0.95;
+
+if(fut.value== modalidades.value ){
+    div_mensagem.innerHTML = `Com a compra de dados da modalidade futebol, obtivemos um lucro de R$${futebol1.toFixed(2)}`;
+}
+if(basq.value==modalidades.value ) {
+    div_mensagem.innerHTML = `Com a compra de dados da modalidade futebol, obtivemos um lucro de R$${basquete1.toFixed(2)}`;
+}
+if(corri.value==modalidades.value ) {
+    div_mensagem.innerHTML = `Com a compra de dados da modalidade futebol, obtivemos um lucro de R$${corrida1.toFixed(2)}`;
+}
+if(vole.value==modalidades.value ) {
+    div_mensagem.innerHTML = `Com a compra de dados da modalidade futebol, obtivemos um lucro de R$${volei1.toFixed(2)}`;
+}
+if(alpi.value==modalidades.value ) {
+    div_mensagem.innerHTML =`Com a compra de dados da modalidade futebol, obtivemos um lucro de R$${alpinista1.toFixed(2)}`;
+}
+}
+</script>
